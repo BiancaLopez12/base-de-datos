@@ -26,13 +26,30 @@ WHERE name LIKE '%Annabel%'
 LIMIT 1
 
 Ejercicio 3
-Parte 1
 SELECT p.name, i.transcript
 FROM interview i JOIN person p ON i.person_id = p.id
-WHERE p.name LIKE 'MORTY Schapiro'
-Parte 2 
+WHERE p.name LIKE 'Morty Schapiro'
+
+Ejercicio 4
 SELECT p.name, i.transcript
 FROM interview i JOIN person p ON i.person_id = p.id
 WHERE p.name LIKE 'Annabel Miller'
 
-Ejercicio 4
+Ejercicio 5
+SELECT p.name AS nombre, i.transcript
+FROM person p JOIN drivers_license d ON license_id = d.id
+WHERE patente LIKE  "%H42W%"
+
+Ejercicio 6
+SELECT p.name AS nombre, d.plate_number AS patente, membership_status
+FROM person p JOIN drivers_license d ON p.license_id = d.id
+JOIN get_fit_now_nember g ON g.person_id = p.id
+WHERE patente LIKE  "%H42W%" AND membership_status= "gold"
+
+Ejercicio 7
+INSERT INTO soluction VALUES(1, 'Jeremy Bowers');
+
+      SELECT value FROM soluction;
+
+
+
